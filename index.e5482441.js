@@ -1,0 +1,2 @@
+function e(){return{buttonFetch:document.querySelector(".fetch-pokemon"),pokemonList:document.querySelector(".pokemon-list")}}e().buttonFetch.addEventListener("click",(function(t){fetch("https://pokeapi.co/api/v2/pokemon/").then((e=>{if(!e.ok)throw new Error("Упс щось пішло не так");return e.json()})).then((({results:t,count:n})=>{var o;o=t,e().pokemonList.insertAdjacentHTML("beforeend",function(e){return e.map((({name:e})=>`<li>${e}</li>`)).join("")}(o))}))}));
+//# sourceMappingURL=index.e5482441.js.map
